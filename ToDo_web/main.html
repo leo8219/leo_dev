@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Things To Do</h1>
-    </header>
-    <form class="todobox" action="" method="get">
-        <input class="todo-txt" type="text" name="" placeholder="할일을 입력하세요">
-        <button class="add-btn" type="submit"></button>
-    </form>
+    <div class="todo-contents">
+        <header><h1>Things To Do</h1></header>
+        <form id="todobox">
+            <input type="text" id="todo-txt" placeholder="할 일을 입력하세요">
+            <button id="add-btn" type="submit">작업추가</button>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+    <template id="todo-items">
+        <li class="todo-item">
+            <input type="checkbox" class="todo-checkbox"/>
+            <span class="item-title"></span>
+            <button class="edit-btn">수정</button>
+            <button class="delete-btn">삭제</button>
+        </li>
+    </template>
     <footer>
         <p>20250819 HYUE ICT 김용태</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
